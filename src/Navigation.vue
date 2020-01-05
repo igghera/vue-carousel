@@ -9,8 +9,8 @@
       v-on:touchstart.prevent="triggerPageAdvance('backward')"
       v-bind:class="{ 'VueCarousel-navigation--disabled': !canAdvanceBackward }"
       v-bind:style="`padding: ${clickTargetSize}px; margin-right: -${clickTargetSize}px;`"
-      v-html="prevLabel"
     ></button>
+    <!-- v-html="prevLabel" -->
     <button
       type="button"
       aria-label="Next page"
@@ -20,8 +20,9 @@
       v-on:touchstart.prevent="triggerPageAdvance('forward')"
       v-bind:class="{ 'VueCarousel-navigation--disabled': !canAdvanceForward }"
       v-bind:style="`padding: ${clickTargetSize}px; margin-left: -${clickTargetSize}px;`"
-      v-html="nextLabel"
-    ></button>
+    >
+    </button> 
+    <!-- v-html="nextLabel" -->
   </div>
 </template>
 
@@ -106,12 +107,14 @@ export default {
   right: 0;
   transform: translateY(-50%) translateX(100%);
   font-family: "system";
+  background-image: url("./right_arrow.png");
 }
 
 .VueCarousel-navigation-prev {
   left: 0;
   transform: translateY(-50%) translateX(-100%);
   font-family: "system";
+  background-image: url("./left_arrow.png");
 }
 
 .VueCarousel-navigation--disabled {

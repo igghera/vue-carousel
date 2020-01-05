@@ -34,7 +34,9 @@
   },
   "homepage": "https://github.com/ssense/vue-carousel#readme",
   "dependencies": {
+    "file-loader": "^5.0.2",
     "global": "^4.3.2",
+    "image-webpack-loader": "^6.0.0",
     "regenerator-runtime": "^0.12.1",
     "vue": "^2.5.17"
   },
