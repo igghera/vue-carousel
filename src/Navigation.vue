@@ -9,7 +9,9 @@
       v-on:touchstart.prevent="triggerPageAdvance('backward')"
       v-bind:class="{ 'VueCarousel-navigation--disabled': !canAdvanceBackward }"
       v-bind:style="`padding: ${clickTargetSize}px; margin-right: -${clickTargetSize}px;`"
-    ></button>
+    >
+      <img src="./left_arrow.png" />
+    </button>
     <!-- v-html="prevLabel" -->
     <button
       type="button"
@@ -21,6 +23,7 @@
       v-bind:class="{ 'VueCarousel-navigation--disabled': !canAdvanceForward }"
       v-bind:style="`padding: ${clickTargetSize}px; margin-left: -${clickTargetSize}px;`"
     >
+      <img src='./right_arrow.png' />
     </button> 
     <!-- v-html="nextLabel" -->
   </div>
@@ -43,14 +46,14 @@ export default {
      */
     nextLabel: {
       type: String,
-      default: "<img src='./images/next_arrow.png' />"
+      default: "<img src='./right_arrow.png' />"
     },
     /**
      * Text content of the navigation prev button
      */
     prevLabel: {
       type: String,
-      default: "<img src='./images/left_arrow.png' />"
+      default: "<img src='./left_arrow.png' />"
     }
   },
   computed: {
